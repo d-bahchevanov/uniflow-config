@@ -32,3 +32,8 @@ security:
     token:
       secret-key: 8pFcrOSF8T9yq2ccOwkmecKcStATsrMftKCFVzdCqXeD5biqlt
       expire-length: 3000000000000
+
+logging:
+  level:
+    org.springframework.boot.web.embedded.tomcat: DEBUG
+    org.springframework.boot.availability: DEBUG
