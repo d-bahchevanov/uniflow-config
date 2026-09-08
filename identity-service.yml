@@ -18,3 +18,13 @@ security:
     token:
       secret-key: 8pFcrOSF8T9yq2ccOwkmecKcStATsrMftKCFVzdCqXeD5biqlt
       expire-length: 3000000000000
+kafka:
+  bootstrap-servers: localhost:9092
+  topics:
+    user-created: user-created
+    user-deleted: user-deleted
+  producer:
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    acks: all
+    retries: 3
