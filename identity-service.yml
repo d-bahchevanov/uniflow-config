@@ -1,1 +1,20 @@
-test.message: "Hello from Config Server"
+server:
+  port: 8080
+datasource:
+  url: jdbc:postgresql://localhost:5432/identity_db
+  username: identity_user
+  password: identity_pass
+  driver-class-name: org.postgresql.Driver
+
+jpa:
+  hibernate:
+    ddl-auto: update
+  show-sql: true
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+security:
+  jwt:
+    token:
+      secret-key: 8pFcrOSF8T9yq2ccOwkmecKcStATsrMftKCFVzdCqXeD5biqlt
+      expire-length: 3000000000000
