@@ -1,41 +1,72 @@
-server:
+ server:
+
   port: 8080
 
+
 spring:
+
   datasource:
-    url: jdbc:postgresql://postgres-identity:5432/identity_db
+
+    url: jdbc:postgresql://localhost:5432/identity_db
+
     username: identity_user
+
     password: identity_pass
+
     driver-class-name: org.postgresql.Driver
 
+
   jpa:
+
     hibernate:
+
       ddl-auto: update
+
     show-sql: true
+
     properties:
+
       hibernate:
+
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
+
   kafka:
-    bootstrap-servers: kafka:9092
+
+    bootstrap-servers: localhost:9092
+
     topics:
+
       user-created: user-created
+
       user-deleted: user-deleted
+
     producer:
+
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
+
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
       acks: all
+
       retries: 3
 
+
 security:
+
   jwt:
+
     token:
+
       secret-key: 8pFcrOSF8T9yq2ccOwkmecKcStATsrMftKCFVzdCqXeD5biqlt
+
       expire-length: 3000000000000
 
+
 logging:
+
   level:
+
     org.springframework.boot.web.embedded.tomcat: DEBUG
+
     org.springframework.boot.availability: DEBUG
-    com.uniflow: DEBUG
-    org.springframework.cloud: INFO
