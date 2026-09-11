@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://enroll_postgres:5432/enroll_db
+    url: jdbc:postgresql://localhost:5432/enroll_db
     username: enroll_user
     password: enroll_pass
     driver-class-name: org.postgresql.Driver
