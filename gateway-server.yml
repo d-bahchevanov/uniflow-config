@@ -26,7 +26,7 @@ eureka:
 
 security:
   jwt:
-    secret-key: 8pFcrOSF8T9yq2ccOwkmecKcStATsrMftKCFVzdCqXeD5biqlt
+    secret-key: ${JWT_SECRET_KEY}
     issuer: uniflow-identity-service
 info:
   app:
