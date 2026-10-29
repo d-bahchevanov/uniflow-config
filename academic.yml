@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:5435/academy_db
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5435/academy_db}
     username: academy_user
     password: academy_pass
     driver-class-name: org.postgresql.Driver
