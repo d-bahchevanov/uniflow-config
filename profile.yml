@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:5433/profile_db
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/profile_db}
     username: profile_user
     password: profile_pass
     driver-class-name: org.postgresql.Driver
